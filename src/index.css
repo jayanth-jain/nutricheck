@@ -1,0 +1,33 @@
+@import '@fontsource/poppins/400.css';
+@import '@fontsource/poppins/600.css';
+@import '@fontsource/poppins/700.css';
+@import '@fontsource/inter/400.css';
+@import '@fontsource/inter/500.css';
+@import '@fontsource/inter/600.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #f97316;
+  --color-secondary: #16a34a;
+  --color-cream: #FFFBF5;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--color-cream);
+}
+
+.dark body {
+  background-color: #111827;
+}
+
+@media print {
+  .no-print { display: none !important; }
+  nav, footer, button, .sticky { display: none !important; }
+  body { background: white !important; color: black !important; font-size: 12pt; }
+  .print-break { page-break-before: always; }
+  a[href]:after { content: " (" attr(href) ")"; }
+  h2 { page-break-after: avoid; }
+}

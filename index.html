@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍽️</text></svg>" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="NutriCheck — An offline-capable, client-only Indian diet analyzer based on ICMR-NIN RDA recommendations, providing nutrient adequacy scoring, absorption insights, and smart food swaps." />
+    <title>NutriCheck — Indian Diet Analyzer</title>
+    <script>
+      (function() {
+        try {
+          var dark = sessionStorage.getItem('nutricheck_dark');
+          if (dark === 'true') document.documentElement.classList.add('dark');
+        } catch(e) {}
+      })();
+    </script>
+  </head>
+  <body class="bg-[#FFFBF5] text-gray-900 antialiased selection:bg-orange-200">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
